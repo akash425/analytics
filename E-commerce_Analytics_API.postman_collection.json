@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "ecom-analytics-api",
+		"name": "E-commerce Analytics API",
+		"description": "Collection of API endpoints for e-commerce analytics queries",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "API status endpoint to verify the server is running"
+			},
+			"response": []
+		},
+		{
+			"name": "Top Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/top-products",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"top-products"
+					]
+				},
+				"description": "Get top 5 products by total sales. Returns product IDs and their total sales amounts."
+			},
+			"response": []
+		},
+		{
+			"name": "Monthly Revenue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/monthly-revenue",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"monthly-revenue"
+					]
+				},
+				"description": "Get total sales revenue per month across all years. Returns month-year format (YYYY-MM) and total revenue."
+			},
+			"response": []
+		},
+		{
+			"name": "Average Sales by Category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/avg-sales",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"avg-sales"
+					]
+				},
+				"description": "Get average sales grouped by category and subcategory. Returns category, subcategory, and average sales amount."
+			},
+			"response": []
+		},
+		{
+			"name": "Yearly Sales Growth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/yearly-growth",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"yearly-growth"
+					]
+				},
+				"description": "Get total sales per year with year-over-year growth percentage. Returns year, total sales, and growth percentage."
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:5008",
+			"type": "string"
+		}
+	]
+}
+

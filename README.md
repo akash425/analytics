@@ -67,6 +67,21 @@ Example:
 curl http://localhost:5008/api/top-products
 ```
 
+#### Postman Collection
+
+A Postman collection is included for easy API testing. Import `E-commerce_Analytics_API.postman_collection.json` into Postman.
+
+The collection includes:
+- All API endpoints pre-configured
+- Base URL variable (`base_url`) set to `http://localhost:5008` (can be changed in Postman)
+- Descriptions for each endpoint
+
+To use:
+1. Open Postman
+2. Click "Import" and select `E-commerce_Analytics_API.postman_collection.json`
+3. Update the `base_url` variable if your server runs on a different host/port
+4. Start testing the endpoints!
+
 ## Project Structure
 
 ```
@@ -77,6 +92,7 @@ analytics/
 ├── mongo_connect.py         # MongoDB connection setup
 ├── queries.py              # All analytics query functions
 ├── app.py                  # Flask REST API server
+├── E-commerce_Analytics_API.postman_collection.json  # Postman collection
 ├── requirements.txt        # Python dependencies
 └── README.md              # This file
 ```
